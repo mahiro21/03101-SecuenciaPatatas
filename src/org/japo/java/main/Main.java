@@ -15,14 +15,51 @@
  */
 package org.japo.java.main;
 
+import java.util.Locale;
+
 /**
  *
  * @author Mario Merlos Abella <mario.merlos.alum@iescamp.es>
  */
 public class Main {
+    
 
     public static void main(String[] args) {
-        System.out.println("Hola Mundo");
+        //variables
+        String comprador = "Jaimito";
+        String producto = "Patata";
+        String productoIm = "Piruleta";
+        int cantidad = 3;
+        int patatasComp;
+        double dineroComp = 1;
+        double cambio;
+               
+        //constantes
+        final double PrecioPatata = 0.30;
+        final double PrecioPiruleta = 0.20;
+        
+        System.out.printf("Secuencia de Patatas%n==============================%n");
+        System.out.printf("Persona encargada .....: %s%n", comprador );
+        System.out.printf("Artículo encargado ....: %s%n", producto );
+        System.out.printf("Cantidad encargada ....: %d Kg%n", cantidad );
+        System.out.println("---");
+        System.out.printf(Locale.ENGLISH, "Precio encargo ........:  %.2f €/Kg%n", PrecioPatata );
+        System.out.printf("Dinero suministrado ...:   %.2f €%n", dineroComp );
+        System.out.println("---");
+        System.out.printf("Artículo imprevisto ...:  %s%n", productoIm );
+        System.out.printf(Locale.ENGLISH, "Precio imprevisto ........:  %.2f €%n", PrecioPiruleta );
+        System.out.println("---");
+        patatasComp = (int)((dineroComp - PrecioPiruleta) / PrecioPatata);
+        cambio = (dineroComp - PrecioPiruleta) % PrecioPatata;
+        System.out.printf(Locale.ENGLISH, "Dinero devuelto .......:    %.2f €%n", cambio );
+        
+        
+        
+        
+       
+        
+        
+        
     }
 
 }
