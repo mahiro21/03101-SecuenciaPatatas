@@ -35,23 +35,23 @@ public class Main {
         double cambio;
                
         //constantes
-        final double PrecioPatata = 0.30;
-        final double PrecioPiruleta = 0.20;
+        final double PATATA = 0.30;
+        final double PIRULETA = 0.20;
         
         System.out.printf("Secuencia de Patatas%n==============================%n");
         System.out.printf("Persona encargada .....: %s%n", comprador );
         System.out.printf("Artículo encargado ....: %s%n", producto );
         System.out.printf("Cantidad encargada ....: %d Kg%n", cantidad );
         System.out.println("---");
-        System.out.printf(Locale.ENGLISH, "Precio encargo ........: %.2f €/Kg%n", PrecioPatata );
+        System.out.printf(Locale.ENGLISH, "Precio encargo ........: %.2f €/Kg%n", PATATA );
         System.out.printf("Dinero suministrado ...: %.2f €%n", dineroComp );
         System.out.println("---");
         System.out.printf("Artículo imprevisto ...: %s%n", productoIm );
-        System.out.printf(Locale.ENGLISH, "Precio imprevisto .....: %.2f €%n", PrecioPiruleta );
+        System.out.printf(Locale.ENGLISH, "Precio imprevisto .....: %.2f €%n", PIRULETA );
         System.out.println("---");
-        patatasComp = (int)((dineroComp - PrecioPiruleta) / PrecioPatata);
+        patatasComp = (int)((dineroComp - PIRULETA) / PATATA);
         System.out.printf("Cantidad comprada .....: %d Kg%n", patatasComp );
-        cambio = (dineroComp - PrecioPiruleta) % PrecioPatata;
+        cambio = (dineroComp - PIRULETA) % PATATA;
         System.out.printf(Locale.ENGLISH, "Dinero devuelto .......: %.2f €%n", cambio );
         
         
